@@ -154,7 +154,7 @@ void postorderTraversal(Node* ptr)
 
 int insert(Node* head, int key)
 {
-	//새로운 노드 생성 및 초기화
+	//새로운 노드 생성 및 키, 왼쪽, 오른쪽 노드 초기화
 	Node* newNode = (Node*)malloc(sizeof(Node));
 	newNode->key = key;
 	newNode->left = NULL;
@@ -205,7 +205,7 @@ int deleteLeafNode(Node* head, int key)
 		return -1;
 	}
 
-	//트리의 루트 노드인 경우 트리가 비어있는지 확인 후 오류 메시지 출력
+	//트리의 루트 노드인 경우 트리가 비어있는지 확인한 후 오류 메시지 출력
 	if (head->left == NULL) {
 		printf("\n Nothing to delete!!\n");
 		return -1;
